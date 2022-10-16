@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: montserrat, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: orange;
+  text-decoration: none;
+}
+
+.main-nav {
+  width: 100%;
+  padding: 1rem;
+  max-height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.main-nav ul { 
+  max-width: 100%;
+  color: orange;
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+  margin-right: 20px;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+  text-decoration-color: orangered;
+}
+.intro {  
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 80%;
+  letter-spacing: 1px;
+  line-height: 2rem;  
+}
+.intro-home, .intro-contact{
+  height: 600px;
+}
+
+.intro-home h1{ 
+  width: 22ch;
+   font-size: 3rem;  
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .08em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto;  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .2em; /* Adjust as needed */
+  margin-top: 20%;
+  animation: 
+    typing 4.5s steps(21),
+     blink-caret .75s step-end infinite; 
+}
+
+
+
+@keyframes typing {
+  
+  from { width: 0; color:orange;}
+  to { width: 23ch; color:orange;}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: lighter;
+  padding-bottom: 3%;
+  text-align: center;
+  height: 50px; 
+  padding-top: 5px; 
+}
+
+h3 {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.my-projects { 
+  display: grid;  
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;  
+}
+
+.grid { 
+  height: 250px;
+  box-shadow: 2px 2px 2px 2px rgb(255, 196, 0);
+  position: relative;
+  border-radius: 3%;  
+}
+img { 
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.grid-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 3px;
+  text-align: center;
+  background: white;
+}
+h4 {
+  font-size: 0.75rem;
+}
+
+.intro-about h4{
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+p {
+  font-size: 0.6rem;
+}
+h4:hover {
+  color: rgb(255, 196, 0);
+  font-size: 1rem;
+}
+.foot ul li {
+  list-style: none; 
+}
+
+@media screen and (max-width: 480px){
+  
+  .intro-home h1{ 
+    font-size: 1rem;
+  }
+  .main-nav ul {
+    justify-content: center;
+  }
+    }
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+  
+      .intro-home h1{ 
+        font-size: 2rem;
+      }
+      .main-nav ul {
+        justify-content: center;
+      }
+      .main-nav ul li a{
+        font-size: 1.2rem;
+        margin-right: 30px;
+      }
+        }
